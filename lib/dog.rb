@@ -4,5 +4,8 @@ class Dog < ActiveRecord::Base
     attributes.each {|key, value| self.send("#{key}=", value)}
   end
 
+  def self.create(attributes)
+    Dog.new(attributes)
+  end
 
 end
