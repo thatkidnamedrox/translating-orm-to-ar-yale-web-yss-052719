@@ -8,4 +8,8 @@ class Dog < ActiveRecord::Base
     Dog.new(attributes)
   end
 
+  def save
+    Dog.save(self)
+  end
+
 end
